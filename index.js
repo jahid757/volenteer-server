@@ -20,7 +20,7 @@ client.connect(err => {
   console.log(`Database Connected With ${port}`)
 
     app.get('/events', (req, res) => {
-        eventCollection.find({})
+        eventCollection.find()
         .toArray( (err,events) => {
             res.send(events)
         })
